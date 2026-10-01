@@ -1,0 +1,17 @@
+# Credentials are NOT stored here.
+# The Airflow dbt DAG reads them from the snowflake_conn connection
+# and passes them in as environment variables.
+
+weather_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "{{ env_var('DBT_ACCOUNT') }}"
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      role: "{{ env_var('DBT_ROLE') }}"
+      warehouse: "{{ env_var('DBT_WAREHOUSE') }}"
+      database: "{{ env_var('DBT_DATABASE') }}"
+      schema: ANALYTICS
+      threads: 1

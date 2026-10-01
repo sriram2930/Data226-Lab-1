@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_weather
+    description: "Cleaned daily weather, one row per city per day"
+    columns:
+      - name: weather_id
+        description: "City + date, used as the primary key"
+        tests:
+          - unique
+          - not_null
+      - name: city
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["San Jose", "New York"]
+      - name: weather_date
+        tests:
+          - not_null
+
+  - name: weather_metrics
+    description: "Moving averages, anomalies, rolling rainfall and dry spells per city"
+    columns:
+      - name: weather_id
+        tests:
+          - unique
+          - not_null
+      - name: city
+        tests:
+          - not_null
+      - name: temp_7day_avg
+        tests:
+          - not_null
+      - name: dry_spell_length
+        tests:
+          - not_null
