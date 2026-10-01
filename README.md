@@ -97,5 +97,5 @@ Apache Airflow 2.10.5, dbt-core 1.12 with dbt-snowflake 1.9, Snowflake, Preset, 
 
 ## Team
 
-- [Name 1]
-- [Name 2]
+- Mansi Verma
+- Sreeramachandra Sai Achutuni
