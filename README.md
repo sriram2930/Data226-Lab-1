@@ -26,7 +26,7 @@ We pull daily weather for **San Jose** and **New York** from the Open-Meteo API,
 ## Repository structure
 
 ```
-weather-analytics-lab/
+Data226-Lab-1/
 ├── dags/
 │   ├── weather_etl.py        Airflow ETL: Open-Meteo API to Snowflake
 │   └── weather_dbt.py        Airflow DAG that runs dbt run, test and snapshot
@@ -41,7 +41,7 @@ weather-analytics-lab/
 │   └── snapshots/weather_snapshot.sql
 ├── sql/
 │   └── snowflake_setup.sql   creates the database, schemas and raw table
-├── screenshots/              Airflow, dbt and Preset screenshots
+├── screenshots/              System diagram (Airflow, dbt and Preset screenshots are in the report)
 ├── Dockerfile                Airflow image with the Snowflake provider and dbt
 ├── docker-compose.yaml
 └── README.md
